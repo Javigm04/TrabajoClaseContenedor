@@ -37,6 +37,7 @@ public class Contenedor {
     public void setAduanas(boolean aduanas) {
         this.aduanas=aduanas;
     }
+    public boolean getAduanas(){ return this.aduanas; }
 
     public void setPrioridad(int prioridad) {
         this.prioridad = prioridad;
@@ -45,4 +46,6 @@ public class Contenedor {
     public int getPrioridad() {
         return prioridad;
     }
+
+
 }
