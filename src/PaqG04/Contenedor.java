@@ -38,8 +38,6 @@ public class Contenedor {
         return aduanas;
     }
 
-    public boolean getAduanas(){ return this.aduanas; }
-
     public void setPrioridad(int prioridad) {
         this.prioridad = prioridad;
     }
@@ -50,5 +48,8 @@ public class Contenedor {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+    public String getDescripcion(){
+        return descripcion;
     }
 }
