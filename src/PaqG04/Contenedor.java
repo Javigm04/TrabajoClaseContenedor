@@ -36,7 +36,7 @@ public class Contenedor {
     }
 
     public void setPais(String pais) {
-        this.pais = pais;
+        if(pais!=null)this.pais=pais;
     }
 
     public String getPais() {
