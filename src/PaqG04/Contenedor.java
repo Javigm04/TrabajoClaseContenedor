@@ -28,7 +28,7 @@ public class Contenedor {
     }
 
     public void setPeso(int peso) {
-        this.peso = peso;
+        if(peso>0)this.peso=peso;
     }
 
     public int getPeso() {
@@ -48,7 +48,7 @@ public class Contenedor {
     }
 
     public void setPrioridad(int prioridad) {
-        this.prioridad = prioridad;
+        if(prioridad>0 && prioridad<=3)this.prioridad = prioridad;
     }
 
     public int getPrioridad() {

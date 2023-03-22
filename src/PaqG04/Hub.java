@@ -10,6 +10,13 @@ public class Hub {
         contenedores=new Contenedor[filas][columnas];
     }
 
+    public Contenedor getContenedor(int fila, int columna){
+        if(fila<0 || fila> contenedores.length || columna<0 || columna> contenedores[0].length){
+            return null;
+        }
+        return contenedores[fila][columna];
+    }
+
     public String toString(){
        String resultado="";
         for(int f=0;f<contenedores.length;f++){
