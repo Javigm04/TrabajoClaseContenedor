@@ -9,7 +9,16 @@ public class Contenedor {
     String descripcion;
     String empresaEnvia;
     String empresaRecibe;
-
+    public Contenedor(int id,int peso,String pais,boolean aduanas,int prioridad,String descripcion,String empresaEnvia,String empresaRecibe){
+        this.id=id;
+        if(peso>0)this.peso=peso;
+        if(pais!=null)this.pais=pais;
+        this.aduanas=aduanas;
+        if(prioridad>0 && prioridad<=3)this.prioridad = prioridad;
+        if(descripcion!=null)this.descripcion=descripcion;
+        if(empresaEnvia!=null)this.empresaEnvia=empresaEnvia;
+        if(empresaRecibe!=null)this.empresaRecibe=empresaRecibe;
+    }
     public void setId(int id) {
         this.id = id;
     }
