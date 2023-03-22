@@ -47,7 +47,9 @@ public class Contenedor {
     }
 
     public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+        if(descripcion!=null) {
+            this.descripcion = descripcion;
+        }
     }
     public String getDescripcion(){
         return descripcion;
