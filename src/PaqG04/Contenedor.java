@@ -63,5 +63,23 @@ public class Contenedor {
     public String getDescripcion(){
         return descripcion;
     }
-    
+
+    public void setEmpresaEnvia(String empresaEnvia) {
+        if(empresaEnvia!=null)this.empresaEnvia=empresaEnvia;
+    }
+    public String getEmpresaEnvia() {
+        return empresaEnvia;
+    }
+
+    public void setEmpresaRecibe(String empresaRecibe) {
+        if(empresaRecibe!=null)this.empresaRecibe=empresaRecibe;
+    }
+
+    public String getEmpresaRecibe() {
+        return empresaRecibe;
+    }
+
+
+
+
 }
