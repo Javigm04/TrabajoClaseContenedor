@@ -43,8 +43,8 @@ public class Contenedor {
         return pais;
     }
 
-    public void setAduanas(boolean aduanas) {
-        this.aduanas=aduanas;
+    public boolean isAduanas() {
+        return aduanas;
     }
 
     public void setPrioridad(int prioridad) {
@@ -55,4 +55,13 @@ public class Contenedor {
         return prioridad;
     }
 
+    public void setDescripcion(String descripcion) {
+        if(descripcion!=null) {
+            this.descripcion = descripcion;
+        }
+    }
+    public String getDescripcion(){
+        return descripcion;
+    }
+    
 }
