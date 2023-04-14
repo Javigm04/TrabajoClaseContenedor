@@ -9,7 +9,7 @@ public class Contenedor {
     String descripcion;
     String empresaEnvia;
     String empresaRecibe;
-    public Contenedor(int id,int peso,String pais,boolean aduanas,int prioridad,String descripcion,String empresaEnvia,String empresaRecibe){
+    public Contenedor( int id,int peso,String pais,boolean aduanas,int prioridad,String descripcion,String empresaEnvia,String empresaRecibe){
         this.id=id;
         if(peso>0)this.peso=peso;
         if(pais!=null)this.pais=pais;
