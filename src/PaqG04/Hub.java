@@ -84,29 +84,30 @@ public class Hub {
                 }
                 return null;
             }
-            public void mostrarDatos(int id){
+            public String mostrarDatos(int id){
+                String resultado="";
                 for(int f=0;f< contenedores.length; f++){
                     for (int c = 0; c < contenedores[f].length; c++) {
                         if(contenedores[f][c]!=null){
                             if(contenedores[f][c].id==id){
-                                System.out.println("Id: "+contenedores[f][c].id);
-                                System.out.println("Peso: "+contenedores[f][c].peso);
-                                System.out.println("Pais: "+contenedores[f][c].pais);
-                                System.out.println("Control de aduanas: "+contenedores[f][c].aduanas);
-                                System.out.println("Prioridad: "+contenedores[f][c].prioridad);
-                                System.out.println("Descripción: "+contenedores[f][c].descripcion);
-                                System.out.println("Empresa que lo envía: "+contenedores[f][c].empresaEnvia);
-                                System.out.println("Empresa que lo recibe: "+contenedores[f][c].empresaRecibe);
-                                return;
+                                resultado+="Id: "+contenedores[f][c].id;
+                                resultado+="Peso: "+contenedores[f][c].peso;
+                                resultado+="Pais: "+contenedores[f][c].pais;
+                                resultado+="Control de aduanas: "+contenedores[f][c].aduanas;
+                                resultado+="Prioridad: "+contenedores[f][c].prioridad;
+                                resultado+="Descripción: "+contenedores[f][c].descripcion;
+                                resultado+="Empresa que lo envía: "+contenedores[f][c].empresaEnvia;
+                                resultado+="Empresa que lo recibe: "+contenedores[f][c].empresaRecibe;
+                                return resultado;
                         }
                     }
                     }
                 }
-                System.out.println("No existe ningún contenedor con el identificador "+id);
+                return "No existe ningún contenedor con el identificador "+id;
     }
-    public void calcularContenedoresDeterminadoPais(String pais){
+    public String calcularContenedoresDeterminadoPais(String pais){
         if(pais==null){
-            return;
+            return "El país es nulo, no se puede comprobar";
         }
         int cont=0;
         for(int f=0;f< contenedores.length; f++){
@@ -118,6 +119,6 @@ public class Hub {
                 }
             }
             }
-        System.out.println("El número de contenedores que pertenece al país "+pais+" es: "+cont);
+        return "El número de contenedores que pertenece al país "+pais+" es: "+cont;
     }
 }

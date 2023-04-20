@@ -2,14 +2,14 @@ package PaqG04;
 
 public class Contenedor {
     int id;
-    int peso;
+    double peso;
     String pais;
     boolean aduanas;
     int prioridad;
     String descripcion;
     String empresaEnvia;
     String empresaRecibe;
-    public Contenedor(int id,int peso,String pais,boolean aduanas,int prioridad,String descripcion,String empresaEnvia,String empresaRecibe){
+    public Contenedor(int id,double peso,String pais,boolean aduanas,int prioridad,String descripcion,String empresaEnvia,String empresaRecibe){
         this.id=id;
         if(peso>0)this.peso=peso;
         if(pais!=null)this.pais=pais;
@@ -27,11 +27,11 @@ public class Contenedor {
         return id;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(double peso) {
         if(peso>0)this.peso=peso;
     }
 
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
 
