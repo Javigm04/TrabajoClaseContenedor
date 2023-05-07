@@ -90,14 +90,14 @@ public class Hub {
                     for (int c = 0; c < contenedores[f].length; c++) {
                         if(contenedores[f][c]!=null){
                             if(contenedores[f][c].id==id){
-                                resultado+="Id: "+contenedores[f][c].id;
-                                resultado+="Peso: "+contenedores[f][c].peso;
-                                resultado+="Pais: "+contenedores[f][c].pais;
-                                resultado+="Control de aduanas: "+contenedores[f][c].aduanas;
-                                resultado+="Prioridad: "+contenedores[f][c].prioridad;
-                                resultado+="Descripción: "+contenedores[f][c].descripcion;
-                                resultado+="Empresa que lo envía: "+contenedores[f][c].empresaEnvia;
-                                resultado+="Empresa que lo recibe: "+contenedores[f][c].empresaRecibe;
+                                resultado+="Id: "+contenedores[f][c].id+"\n";
+                                resultado+="Peso: "+contenedores[f][c].peso+"\n";
+                                resultado+="Pais: "+contenedores[f][c].pais+"\n";
+                                resultado+="Control de aduanas: "+contenedores[f][c].aduanas+"\n";
+                                resultado+="Prioridad: "+contenedores[f][c].prioridad+"\n";
+                                resultado+="Descripción: "+contenedores[f][c].descripcion+"\n";
+                                resultado+="Empresa que lo envía: "+contenedores[f][c].empresaEnvia+"\n";
+                                resultado+="Empresa que lo recibe: "+contenedores[f][c].empresaRecibe+"\n";
                                 return resultado;
                         }
                     }
