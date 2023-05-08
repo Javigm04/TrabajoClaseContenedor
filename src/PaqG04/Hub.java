@@ -39,7 +39,7 @@ public class Hub {
         if (contenedor != null) {
             if (contenedor.prioridad == 1) {
                 for (int c = 0; c < contenedores[0].length; c++) {
-                    for (int f = 0; f < contenedores.length; f++) {
+                    for (int f = contenedores.length-1; f >= 0; f--) {
                         if (contenedores[f][c] == null) {
                             contenedores[f][c] = contenedor;
                             return;
@@ -49,7 +49,7 @@ public class Hub {
             } else {
                 if (contenedor.prioridad == 2) {
                     for (int c = 1; c < contenedores[0].length; c++) {
-                        for (int f = 0; f < contenedores.length; f++) {
+                        for (int f = contenedores.length-1; f >= 0; f--) {
                             if (contenedores[f][c] == null) {
                                 contenedores[f][c] = contenedor;
                                 return;
@@ -59,7 +59,7 @@ public class Hub {
                     }
                 } else {
                         for (int c = 2; c < contenedores[0].length; c++) {
-                            for (int f = 0; f < contenedores.length; f++) {
+                            for (int f = contenedores.length-1; f >= 0; f--) {
                                 if (contenedores[f][c] == null) {
                                     contenedores[f][c] = contenedor;
                                     return;
