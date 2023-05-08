@@ -76,7 +76,7 @@ public class Hub {
                     return null;
                 }
                 for (int f = 0; f < contenedores.length; f++) {
-                    if (contenedores[f][columna] != null) {
+                    if (contenedores [f][columna] != null) {
                         Contenedor aux = contenedores[f][columna];
                         contenedores[f][columna] = null;
                         return aux;
