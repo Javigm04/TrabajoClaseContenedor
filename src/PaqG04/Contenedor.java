@@ -1,6 +1,8 @@
 package PaqG04;
 
-public class Contenedor {
+import java.io.Serializable;
+
+public class Contenedor implements Serializable {
     int id;
     double peso;
     String pais;
