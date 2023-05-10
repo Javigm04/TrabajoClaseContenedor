@@ -31,6 +31,13 @@ public class Puerto implements Serializable {
         if(hubs[nHub].desapilar(columna)) {
             return "El contenedor ha sido desapilado con éxito";
         }
-        return "No hay ningún contenedor en la columna "+columna+"del hub "+nHub;
+        return "No hay ningún contenedor en la columna "+columna+" del hub "+nHub;
+    }
+    public String mostrarDatos(int nHub, int id){
+        String resultado=hubs[nHub].mostrarDatos(id);
+        if(resultado.equals("0")){
+            return "No existe ningún contenedor con el id "+id+" en el hub "+nHub;
+        }
+        return "Hub: "+nHub+"\n"+resultado;
     }
 }

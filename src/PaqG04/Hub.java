@@ -101,7 +101,7 @@ public class Hub implements Serializable {
                     }
                     }
                 }
-                return "No existe ningún contenedor con el identificador "+id;
+                return "0";
     }
     public String calcularContenedoresDeterminadoPais(String pais){
         if(pais==null){
