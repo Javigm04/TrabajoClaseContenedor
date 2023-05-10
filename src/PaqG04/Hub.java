@@ -32,18 +32,15 @@ public class Hub implements Serializable {
         }
         return resultado;
     }
-    public void apilarContenedor(Contenedor contenedor) {
+    public boolean apilarContenedor(Contenedor contenedor) {
         int cont=0;
-        if(contenedor.prioridad<=0 || contenedor.prioridad>=4){
-            return;
-        }
         if (contenedor != null) {
             if (contenedor.prioridad == 1) {
                 for (int c = 0; c < contenedores[0].length; c++) {
                     for (int f = contenedores.length-1; f >= 0; f--) {
                         if (contenedores[f][c] == null) {
                             contenedores[f][c] = contenedor;
-                            return;
+                            return true;
                         }
                     }
                 }
@@ -53,7 +50,7 @@ public class Hub implements Serializable {
                         for (int f = contenedores.length-1; f >= 0; f--) {
                             if (contenedores[f][c] == null) {
                                 contenedores[f][c] = contenedor;
-                                return;
+                                return true;
                             }
                         }
 
@@ -63,13 +60,14 @@ public class Hub implements Serializable {
                             for (int f = contenedores.length-1; f >= 0; f--) {
                                 if (contenedores[f][c] == null) {
                                     contenedores[f][c] = contenedor;
-                                    return;
+                                    return true;
                                 }
                                 }
                             }
                         }
                     }
                 }
+        return false;
             }
 
             public Contenedor desapilar(int columna) {
