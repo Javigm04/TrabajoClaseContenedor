@@ -103,10 +103,7 @@ public class Hub implements Serializable {
                 }
                 return "0";
     }
-    public String calcularContenedoresDeterminadoPais(String pais){
-        if(pais==null){
-            return "El país es nulo, no se puede comprobar";
-        }
+    public int calcularContenedoresDeterminadoPais(String pais){
         int cont=0;
         for(int f=0;f< contenedores.length; f++){
             for (int c = 0; c < contenedores[f].length; c++) {
@@ -117,6 +114,6 @@ public class Hub implements Serializable {
                 }
             }
         }
-        return "El número de contenedores que pertenece al país "+pais+" es: "+cont;
+        return cont;
     }
 }

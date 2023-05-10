@@ -40,4 +40,9 @@ public class Puerto implements Serializable {
         }
         return "Hub: "+nHub+"\n"+resultado;
     }
+    public String calcularNumeroContenedoresDeUnPais(int nHub, String pais){
+        int resultado=hubs[nHub].calcularContenedoresDeterminadoPais(pais);
+        return "En el hub "+nHub+" hay "+resultado+" contenedores del país "+pais;
+    }
+
 }
