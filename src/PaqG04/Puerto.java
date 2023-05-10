@@ -21,11 +21,13 @@ public class Puerto implements Serializable {
         return resultado;
     }
 
-    public String apilar(int nHub,Contenedor contenedor){
-        if(hubs[nHub].apilarContenedor(contenedor)){
-            return "El contenedor ha sido apilado con éxito";
+    public String apilar(Contenedor contenedor){
+        for(int i=0;i<3;i++){
+            if(hubs[i].apilarContenedor(contenedor)){
+                return "El contenedor ha sido apilado con éxito";
+            }
         }
-        return "El hub número:"+nHub+" está lleno";
+        return "Los hubs están llenos para la prioridad "+contenedor.prioridad;
     }
     public String desapilar(int nHub,int columna){
         if(hubs[nHub].desapilar(columna)) {

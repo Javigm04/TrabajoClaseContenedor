@@ -33,41 +33,33 @@ public class Hub implements Serializable {
         return resultado;
     }
     public boolean apilarContenedor(Contenedor contenedor) {
-        int cont=0;
-        if (contenedor != null) {
             if (contenedor.prioridad == 1) {
-                for (int c = 0; c < contenedores[0].length; c++) {
                     for (int f = contenedores.length-1; f >= 0; f--) {
+                        if (contenedores[f][0] == null) {
+                            contenedores[f][0] = contenedor;
+                            return true;
+                        }
+                    }
+                return false;
+            }
+            if (contenedor.prioridad == 2) {
+                        for (int f = contenedores.length-1; f >= 0; f--) {
+                            if (contenedores[f][1] == null) {
+                                contenedores[f][1] = contenedor;
+                                return true;
+                            }
+                        }
+                    return false;
+                }
+            for (int c = 2; c < contenedores[0].length; c++) {
+                    for (int f = contenedores.length - 1; f >= 0; f--) {
                         if (contenedores[f][c] == null) {
                             contenedores[f][c] = contenedor;
                             return true;
                         }
                     }
                 }
-            } else {
-                if (contenedor.prioridad == 2) {
-                    for (int c = 1; c < contenedores[0].length; c++) {
-                        for (int f = contenedores.length-1; f >= 0; f--) {
-                            if (contenedores[f][c] == null) {
-                                contenedores[f][c] = contenedor;
-                                return true;
-                            }
-                        }
-
-                    }
-                } else {
-                        for (int c = 2; c < contenedores[0].length; c++) {
-                            for (int f = contenedores.length-1; f >= 0; f--) {
-                                if (contenedores[f][c] == null) {
-                                    contenedores[f][c] = contenedor;
-                                    return true;
-                                }
-                                }
-                            }
-                        }
-                    }
-                }
-        return false;
+            return false;
             }
 
             public boolean desapilar(int columna) {
