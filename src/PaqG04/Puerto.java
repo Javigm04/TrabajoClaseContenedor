@@ -27,5 +27,10 @@ public class Puerto implements Serializable {
         }
         return "El hub número:"+nHub+" está lleno";
     }
-
+    public String desapilar(int nHub,int columna){
+        if(hubs[nHub].desapilar(columna)) {
+            return "El contenedor ha sido desapilado con éxito";
+        }
+        return "No hay ningún contenedor en la columna "+columna+"del hub "+nHub;
+    }
 }

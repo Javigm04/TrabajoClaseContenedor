@@ -70,18 +70,17 @@ public class Hub implements Serializable {
         return false;
             }
 
-            public Contenedor desapilar(int columna) {
+            public boolean desapilar(int columna) {
                 if (columna < 0 || columna > contenedores[0].length) {
-                    return null;
+                    return false;
                 }
                 for (int f = 0; f < contenedores.length; f++) {
                     if (contenedores [f][columna] != null) {
-                        Contenedor aux = contenedores[f][columna];
                         contenedores[f][columna] = null;
-                        return aux;
+                        return true;
                     }
                 }
-                return null;
+                return false;
             }
             public String mostrarDatos(int id){
                 String resultado="";
